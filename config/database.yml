@@ -23,3 +23,13 @@ test:
 production:
   <<: *default
   database: storage/production.sqlite3
+
+
+## for ProsgreSQL
+# development:
+#   database: app_name_development
+#   adapter: postgresql
+#   username: admin
+#   password: admin
+#   pool:  <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
