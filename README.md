@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+`bundle exec rails g model writer name:string age:integer`
+
+`bundle exec rails db:migrate`
+
+`bundle exec rails test`
