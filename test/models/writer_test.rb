@@ -23,4 +23,9 @@ class WriterTest < ActiveSupport::TestCase
   def test_has_many_posts
     assert_equal @writer.posts.count, 1
   end
+
+  # def test_select_list
+  #   list = [['John', @john.id], ['Junior', @junior.id]].sort_by{|name, id| id}
+  #   assert_equal Writer.select_lists, list
+  # end
 end
