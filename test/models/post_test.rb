@@ -1,7 +1,12 @@
 require "test_helper"
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @one = posts(:one)
+    @john = writer(:john)
+  end
+
+  def test_belongs_to
+    assert_equal @one.writer.id, @john.id
+  end
 end

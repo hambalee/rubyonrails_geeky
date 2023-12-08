@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :writer_id, style: "display: block" %>
-    <%= form.text_field :writer_id %>
+    <%= form.select :writer_id, Writer.select_lists %>
   </div>
 
   <div>

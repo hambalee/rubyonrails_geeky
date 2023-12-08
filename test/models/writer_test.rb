@@ -19,4 +19,8 @@ class WriterTest < ActiveSupport::TestCase
   def test_age
     assert_equal @writer.age, 20
   end
+
+  def test_has_many_posts
+    assert_equal @writer.posts.count, 1
+  end
 end
