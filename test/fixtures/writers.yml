@@ -7,3 +7,9 @@ john:
 junior:
   name: Junior
   age: 12
+
+# <% 10.times do |i|%>
+# post_<%= i %>:
+#   name: post_<%= i %>
+#   age: <% rand(10..20) %>
+# <% end %>

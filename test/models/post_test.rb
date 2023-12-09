@@ -22,4 +22,28 @@ class PostTest < ActiveSupport::TestCase
   # def test_body
   #   assert_equal @one.body, "My Text"
   # end
+
+  def test_body
+    assert_equal @one.body, "MyText asdfasdfasdfasdfasdfasdf"
+  end
+
+  def test_body_presence
+    @one.body = "123456789"
+
+    valid = @one.valid?
+    message = @one.errors.first.full_message
+
+    assert_equal valid, false
+    assert_equal message, "Body must have more than 10 characters"
+  end
+
+  def test_body_nil
+    @one.body = nil
+
+    valid = @one.valid?
+    message = @one.errors.first.full_message
+
+    assert_equal valid, false
+    assert_equal message, "Body can't be blank"
+  end
 end
