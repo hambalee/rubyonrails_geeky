@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    # @posts = Post.all
+
+    # ทำให้ ORM ไม่ต้อง query 2 รอบ เราสามารถ optimize query ได้โดยใช้ eager load
+    # ซึ่งก็จะ join มาให้เราแต่แรก
+    @posts = Post.eager_load(:writer).all
   end
 
   # GET /posts/1 or /posts/1.json

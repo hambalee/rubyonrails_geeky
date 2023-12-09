@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :posts
   # RESTful
   # - list, show, new, edit, create, update, delete
+  
+  root "posts#index"
 end

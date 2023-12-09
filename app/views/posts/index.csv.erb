@@ -1,4 +1,4 @@
-id, title, body
+id, title, body, created_at, updated_at
 <% @posts.each do |post| %>
-<% "#{post.id}, #{post.title}, #{post.body}" %>
+<%= "#{post.id}, #{post.title}, #{post.body}, #{post.created_at}, #{post.updated_at}" %>
 <% end %>
