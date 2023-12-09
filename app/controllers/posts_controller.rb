@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
     # ทำให้ ORM ไม่ต้อง query 2 รอบ เราสามารถ optimize query ได้โดยใช้ eager load
     # ซึ่งก็จะ join มาให้เราแต่แรก
-    @posts = Post.eager_load(:writer).all
+    @posts = Post.eager_load(:writer, :tags).all
   end
 
   # GET /posts/1 or /posts/1.json

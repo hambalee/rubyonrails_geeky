@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :tags, style: "display: block" %>
+    <%= form.text_area :tags_string %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
